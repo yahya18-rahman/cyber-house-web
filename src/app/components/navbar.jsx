@@ -1,70 +1,99 @@
-"use client"
+"use client";
 
-import React, { useState, useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
-import Logo from '../../assets/logo.png'
+import React, { useState, useRef } from "react";
+import { ChevronDown, Link, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const timeoutRef = useRef(null);
-  
-    const handleMouseEnter = () => {
-      clearTimeout(timeoutRef.current); // Hentikan timeout jika ada
-      setIsHovered(true);
-    };
-  
-    const handleMouseLeave = () => {
-      timeoutRef.current = setTimeout(() => {
-        setIsHovered(false);
-      }, 500); // Jeda 2 detik
-    };
-  
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsHovered(false);
+    }, 500);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="w-full text-[#1a2434] flex font-semibold py-4 bg-[#F9FCFF]">
-        <Image alt='logo' src={Logo} className='mx-[80px]' />
-      <div className="max-w-6xl flex items-center justify-center gap-[48px]">
-        <div >
-        <a className='text-[20px]' >About Us</a>
+     <a href="/"> <Image  alt="logo" src={Logo} className="mx-[20px] md:mx-[80px]" /></a>
+      <div className="flex-1 flex justify-end md:hidden">
+        <button onClick={toggleMenu} className="mr-4">
+          {isMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
+        </button>
+      </div>
+      <div
+        className={`hidden md:flex items-center justify-center gap-[48px] ${
+          isMenuOpen ? "flex" : "hidden"
+        } md:flex`}
+      >
+        <div>
+          <a href="/#About" className="text-[20px]">About Us</a>
         </div>
 
         <div
-      className="relative text-[20px]"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <button className="flex items-center transition-colors">
-        Our Class 
-        <ChevronDown
-          className={`ml-1 w-4 h-4 transition-transform ${isHovered ? 'rotate-180' : ''}`}
-        />
-      </button>
-
-      {isHovered && (
-        <div
-          className="absolute bg-white shadow-md mt-2 p-2 rounded z-10 w-[200px] "
-          onMouseEnter={handleMouseEnter} // Tetap aktif saat hover di div
-          onMouseLeave={handleMouseLeave} // Aktifkan timeout saat mouse keluar dari div
+          className="relative text-[20px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <ul className='' >
-           <li className="transition-colors hover:text-yellow-500">Free Class</li>
-            <li className="transition-colors hover:text-yellow-500">Paid Class</li>
-            <li className="transition-colors hover:text-yellow-500">Mini Course</li>
-          </ul>
-        </div>
-      )}
-    </div>
+          <button className="flex items-center transition-colors">
+            Our Class
+            <ChevronDown
+              className={`ml-1 w-4 h-4 transition-transform ${
+                isHovered ? "rotate-180" : ""
+              }`}
+            />
+          </button>
 
-       <div>
-       <a className='text-[20px]'>Blog</a>
-       </div>
+          {isHovered && (
+            <div
+              className="absolute bg-white shadow-md mt-2 p-2 rounded z-10 w-[200px]"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <ul>
+                <li className="transition-colors hover:text-yellow-500">
+                 <a href="/#Product">Free Class</a>
+                </li>
+                <li className="transition-colors hover:text-yellow-500">
+                <a href="/#Product">Free Class</a>
+                </li>
+                <li className="transition-colors hover:text-yellow-500">
+                <a href="/#Product">Free Class</a>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
 
         <div>
-        <a className='text-[20px]'>Contact</a>
+          <a href="/#Footer" className="text-[20px] ">Contact</a>
         </div>
-        
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-[#F9FCFF] shadow-md p-4 z-10">
+          <div className="flex flex-col items-center gap-4">
+          <a href="/#About" className="text-[20px]">About Us</a>
+          <a href="/#Product" className="text-[20px]" >Our Class</a>
+            <a href="/#Footer" className="text-[20px] ">Contact</a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

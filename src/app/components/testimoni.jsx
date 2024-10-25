@@ -40,7 +40,7 @@ const testimoni = () => {
         }
     ]
     return (
-        <section className="py-[50px] bg-[#F9FCFF]">
+        <section id="testimoni" className="py-[50px] bg-[#F9FCFF]">
             <div className="flex flex-col justify-center items-center">
                     <div className="flex items-center gap-[24px]">
                         <div className="border-2 border-[#f5ba20] w-[64px] rounded-full h-0"></div>
@@ -50,10 +50,10 @@ const testimoni = () => {
                 </div>
             
            
-            <div className="flex justify-between mt-[80px] px-[80px]" data-aos="fade-up">
+            <div className="flex justify-between mt-[80px] px-[80px] max-xl:flex-col max-xl:justify-between max-xl:items-center" data-aos="fade-up">
                 {
                     testimonials.map((testimoni, index) => (
-                        <div key={index} className="rounded-[16px] w-[405.33px]  p-[32px] bg-white" >
+                        <div key={index} className="rounded-[16px] w-[405.33px]  p-[32px] bg-white max-xl:mt-[1rem]" >
                             <div className="flex  gap-[16px]" >
                                 <Image  width={92} height={92} src={testimoni.img}/>
                                 <div>

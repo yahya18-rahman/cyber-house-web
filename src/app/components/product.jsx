@@ -44,7 +44,7 @@ const Product = () => {
     };
 
     return (
-        <section className="bg-[#F9FCFF] flex justify-center items-center p-[80px]">
+        <section id='Product' className="bg-[#F9FCFF] flex justify-center items-center p-[80px]">
             <div className="bg-[white] w-[1300px] max-w-[1300px] transition-all duration-300 p-[80px]">
                 <div className="py-[50px]">
                     <div className="flex items-center justify-center gap-[24px]">
@@ -55,24 +55,24 @@ const Product = () => {
                 </div>
 
                 <center>
-                    <div className="flex justify-center gap-[16px] items-center w-[754px] max-w-[754px] h-[77px] rounded-[40px] bg-[#F4F4F4] px-[8px] transition-all duration-300">
+                    <div className="flex justify-between gap-[10px] items-center w-[754px] max-w-[754px] h-[77px] max-md:w-[350px] max-md:h-[50px] rounded-[40px] bg-[#F4F4F4] px-[8px] transition-all duration-300">
                         <div
-                            className={`w-[246px] h-[61px] rounded-[40px] flex justify-center items-center transition-all duration-500 ${activeClass === 'FreeClass' ? 'bg-white' : ''} cursor-pointer`}
+                            className={`w-[150px] h-[50px] rounded-[40px] max-md:w-[100px] max-md:h-[30px] flex justify-center items-center transition-all duration-500 ${activeClass === 'FreeClass' ? 'bg-white' : ''} cursor-pointer`}
                             onClick={() => handleClick(FreeClass, 'FreeClass')}
                         >
-                            <h1 className="text-[24px] text-[#1A2434]">Free Class</h1>
+                            <h1 className="text-[24px] max-md:text-[15px] text-[#1A2434]">Free Class</h1>
                         </div>
                         <div
-                            className={`w-[246px] h-[61px] rounded-[40px] flex justify-center items-center transition-all duration-500 ${activeClass === 'PaidClass' ? 'bg-white' : ''} cursor-pointer`}
+                            className={`w-[150px] h-[50px] max-md:w-[100px] max-md:h-[30px] rounded-[40px] flex justify-center items-center transition-all duration-500 ${activeClass === 'PaidClass' ? 'bg-white' : ''} cursor-pointer`}
                             onClick={() => handleClick(PaidClass, 'PaidClass')}
                         >
-                            <h1 className="text-[24px] text-[#1A2434]">Paid Class</h1>
+                            <h1 className="text-[24px] max-md:text-[15px] text-[#1A2434]">Paid Class</h1>
                         </div>
                         <div
-                            className={`w-[246px] h-[61px] rounded-[40px] flex justify-center items-center transition-all duration-500 ${activeClass === 'MiniClass' ? 'bg-white' : ''} cursor-pointer`}
+                            className={`w-[150px] h-[50px] max-md:w-[100px] max-md:h-[30px] rounded-[40px] flex justify-center items-center transition-all duration-500 ${activeClass === 'MiniClass' ? 'bg-white' : ''} cursor-pointer`}
                             onClick={() => handleClick(MiniClass, 'MiniClass')}
                         >
-                            <h1 className="text-[24px] text-[#1A2434]">Mini Course</h1>
+                            <h1 className="text-[24px] max-md:text-[15px] text-[#1A2434]">Mini Course</h1>
                         </div>
                     </div>
 
