@@ -1,8 +1,5 @@
 "use client"
 import Image from "next/image"
-import Sarah from '../../assets/Testimonial/sarah.png'
-import Andini from '../../assets/Testimonial/Andini.png'
-import Rizky from '../../assets/Testimonial/rizky.png'
 import Student from '../../assets/unknow.png'
 import { FaStar } from "react-icons/fa";
 import AOS from 'aos'
