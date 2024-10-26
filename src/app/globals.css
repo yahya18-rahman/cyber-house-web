@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 * {
+    overflow-x: hidden;
     -webkit-user-drag: none;
     cursor: pointer;
 }

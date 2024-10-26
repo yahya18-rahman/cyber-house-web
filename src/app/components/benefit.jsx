@@ -49,12 +49,12 @@ const Benefit = () => {
                         <div className="border-2 border-[#f5ba20] w-[64px] rounded-full h-0"></div>
                         <h1 className="ml-2 text-[24px] text-[#1A2434]">Why choose us</h1>
                     </div>
-                    <h1 className="text-[32px] text-[#1A2434] font-semibold">Best Learning Experience</h1>
+                    <h1 className="text-[32px] text-[#1A2434] font-semibold max-sm:text-[25px] ">Best Learning Experience</h1>
                 </div>
 
                 <div 
                     data-aos="fade-up" 
-                    className="grid grid-cols-4 gap-[32px] px-[80px] mt-[24px]  max-xl:grid-cols-2 max-sm:grid-cols-1"
+                    className="grid grid-cols-4 gap-[32px] px-[80px] mt-[24px]  max-xl:grid-cols-2 max-sm:grid-cols-1 max-sm:p-[10px]"
                 >
                     {benefits.map((benefit, index) => (
                         <div key={index} className="bg-white border border-gray-300 rounded-lg shadow-md p-[24px] flex flex-col items-start">

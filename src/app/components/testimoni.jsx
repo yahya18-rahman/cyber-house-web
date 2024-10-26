@@ -50,7 +50,7 @@ const testimoni = () => {
                 </div>
             
            
-            <div className="flex justify-between mt-[80px] px-[80px] max-xl:flex-col max-xl:justify-between max-xl:items-center" data-aos="fade-up">
+            <div className="flex justify-between mt-[80px] px-[80px] max-xl:flex-col max-xl:justify-between max-xl:items-center max-sm:px-[10px]" data-aos="fade-up">
                 {
                     testimonials.map((testimoni, index) => (
                         <div key={index} className="rounded-[16px] w-[405.33px]  p-[32px] bg-white max-xl:mt-[1rem]" >

@@ -44,8 +44,8 @@ const Product = () => {
     };
 
     return (
-        <section id='Product' className="bg-[#F9FCFF] flex justify-center items-center p-[80px]">
-            <div className="bg-[white] w-[1300px] max-w-[1300px] transition-all duration-300 p-[80px]">
+        <section id='Product' className="bg-[#F9FCFF] flex justify-center items-center p-[80px] max-sm:p-0">
+            <div className="bg-[white] w-[1300px] max-w-[1300px] transition-all duration-300 p-[80px] max-sm:p-0">
                 <div className="py-[50px]">
                     <div className="flex items-center justify-center gap-[24px]">
                         <div className="border-2 border-[#A4074D] w-[64px] rounded-full h-0"></div>
@@ -111,9 +111,11 @@ const Product = () => {
                             <h1 className="text-[24px] text-[#1A2434]">Coming Soon</h1>
                         </div>
                     )}
+                    <a href='/detail'>
                     <div className="mt-[40px] bg-[#f5ba20] text-white transition-all duration-700 flex items-center justify-center ease-in-out w-[307px] h-[72px] rounded-[16px] hover:shadow-xl hover:scale-105">
                         <h1 className='text-left text-[20px] text-white font-bold flex items-center gap-[16px]'>View all class <span className='flex items-center'><FaArrowRightLong /></span></h1>
                     </div>
+                    </a>
                 </center>
             </div>
         </section>

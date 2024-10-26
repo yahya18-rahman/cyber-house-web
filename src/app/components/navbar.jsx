@@ -46,40 +46,9 @@ const Navbar = () => {
           <a href="/#About" className="text-[20px]">About Us</a>
         </div>
 
-        <div
-          className="relative text-[20px]"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <button className="flex items-center transition-colors">
-            Our Class
-            <ChevronDown
-              className={`ml-1 w-4 h-4 transition-transform ${
-                isHovered ? "rotate-180" : ""
-              }`}
-            />
-          </button>
-
-          {isHovered && (
-            <div
-              className="absolute bg-white shadow-md mt-2 p-2 rounded z-10 w-[200px]"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <ul>
-                <li className="transition-colors hover:text-yellow-500">
-                 <a href="/#Product">Free Class</a>
-                </li>
-                <li className="transition-colors hover:text-yellow-500">
-                <a href="/#Product">Free Class</a>
-                </li>
-                <li className="transition-colors hover:text-yellow-500">
-                <a href="/#Product">Free Class</a>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
+          <div>
+            <a href="/#Product"  className="text-[20px]" >Our Class</a>
+          </div>
 
         <div>
           <a href="/#Footer" className="text-[20px] ">Contact</a>

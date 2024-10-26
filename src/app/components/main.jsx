@@ -91,31 +91,34 @@ const main = () => {
 
         <div>
           <div data-aos="fade-left" className="flex">
-            <div className="absolute bg-white w-[296px] h-[480px] rounded-[16px] mt-[16px]">
-              <p className="text-[20px] font-bold text-[#1A2434] pl-[32px] pt-[16px] w-full">
+            <div className="absolute bg-white w-[300px] h-[480px] rounded-[16px] mt-[16px]">
+              <p className="text-[20px] font-bold text-[#1A2434] pl-[20px] pt-[16px] w-full">
                 Our Mentor
               </p>
-              {mentors.map((mentor) => (
-                <div className="pl-[32px] pt-[16px]">
-                  <div className="flex">
-                    <Image
-                      alt="ibnu"
-                      src={mentor.image}
-                      widths={42}
-                      className="h-auto max-h-[42px] object-cover"
-                    />
-                    <div className="px-[8px]">
-                      <h1 className="font-bold text-[16px]">{mentor.name}</h1>
-                      <p className="text-[14px] text-[#575455] font-bold">
-                        {mentor.position}
-                      </p>
-                      <p className="text-[12px] text-[#575455] font-thin">
-                        {mentor.description}
-                      </p>
+              <div className="max-h-[480px] overflow-y-auto">
+                {mentors.map((mentor, index) => (
+                  <div key={index} className="px-[32px] py-[16px] border-b border-gray-100 last:border-b-0">
+                    <div className="flex gap-[8px]">
+                      <div className="flex-shrink-0">
+                        <Image
+                          alt={mentor.name}
+                          src={mentor.image}
+                          width={42}
+                          height={42}
+                          className="rounded-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h1 className="font-bold text-[16px] truncate">{mentor.name}</h1>
+                        <p className="text-[14px] text-[#575455] font-bold">{mentor.position}</p>
+                        <p className="text-[12px] text-[#575455] font-thin line-clamp-3">
+                          {mentor.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             <div className="border-2 ml-[219px] border-[#f5ba20] w-[405px] h-[540px] md:h-[666px] bg-[#f5ba20] rounded-[24px]" />
           </div>

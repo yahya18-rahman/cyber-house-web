@@ -58,7 +58,7 @@ const Product = () => {
                             {/* Course Card */}
                             <div className="bg-white rounded-lg shadow-md p-6">
                                 <div className="flex justify-between items-start mb-4">
-                                    <h2 className="text-2xl font-bold">Mastering Cyber Security: Zero To Hero</h2>
+                                    <h2 className="text-2xl font-bold text-left">Mastering Cyber Security: Zero To Hero</h2>
                                     <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-medium">
                                         5 Mio
                                     </span>
@@ -86,16 +86,18 @@ const Product = () => {
                                     <span>Main Campus</span>
                                 </div>
 
-                                <div className="flex items-center justify-between">
+                                <div className="flex flex-col items-start ">
                                     <div className="flex items-center gap-2">
                                         <User className="w-5 h-5 text-gray-600" />
                                         <span className="text-gray-700">Hosted by: Ibnu Faisal</span>
                                     </div>
 
-                                    <div className="flex items-center gap-4">
-                                        <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
+                                    <div className="flex items-center gap-4 mt-[20px]">
+                                       <a href='https://forms.gle/qKKvgGfXz3mgs5Uz9' target='_blank' >
+                                       <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
                                             Enroll Now
                                         </button>
+                                       </a>
                                         <button
                                             onClick={() => setShowDetails(!showDetails)}
                                             className="text-yellow-500 font-medium hover:text-yellow-600 transition-colors"
@@ -159,9 +161,11 @@ const Product = () => {
                                     </div>
 
                                     <div className="mt-8 text-center">
+                                        <a href='https://forms.gle/qKKvgGfXz3mgs5Uz9' target='_blank' >
                                         <button className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors">
                                             Register Now!
                                         </button>
+                                        </a>
                                     </div>
                                 </div>
                             )}

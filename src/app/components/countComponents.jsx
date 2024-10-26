@@ -15,7 +15,7 @@ const Count = () => {
     }, []);
 
     return (
-        <div className="counter-wrapper flex justify-between max-lg:grid grid-cols-2 max-md:grid-cols-1 px-[89px]" data-aos="fade-down">
+        <div className="counter-wrapper flex justify-between max-lg:grid grid-cols-2 max-sm:grid-cols-1 px-[89px]" data-aos="fade-down">
             <div className="counter flex flex-col items-center justify-center">
                 <h1 className="text-[64px] text-black font-bold max-md:mt-[1rem]">
                     <CountUp start={0} end={10} delay={1} />

@@ -30,9 +30,9 @@ const Aboutus = () => {
     }, [isCounting]);
 
     return (
-        <section id="About" className="bg-[#F9FCFF]">
+        <section id="About" className="bg-[#F9FCFF] mb-[3rem]">
             <div className="p-[80px] grid grid-cols-2 max-xl:grid-cols-1 max-md:p-[10px]" ref={aboutRef}>
-                <div className="w-[600px] h-[600px] rounded-[16px] object-cover max-md:w-[300px] max-md:h-[300px]">
+                <div className="w-[600px] h-[600px] rounded-[16px]  overflow-hidden object-cover max-md:w-[300px] max-md:h-[300px]">
                     <Image alt="models" src={Models} className="object-cover" />
                 </div>
                 <div>
