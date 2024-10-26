@@ -21,28 +21,28 @@ const Count = () => {
                     <CountUp start={0} end={10} delay={1} />
                     <span className="text-[#f5ba20]">+</span>
                 </h1>
-                <p className="text-[20px] text-[#1A2434]">Mentors Years of Experience</p>
+                <p className="text-[20px] text-[#1A2434] max-md:text-center">Mentors Years of Experience</p>
             </div>
             <div className="counter flex flex-col items-center justify-center  max-md:mt-[1rem]">
                 <h1 className="text-[64px] text-black font-bold">
                     <CountUp start={0} end={100} delay={1}/>
                     <span className="text-[#f5ba20]">+</span>
                 </h1>
-                <p className="text-[20px] text-[#1A2434]">Community Members</p>
+                <p className="text-[20px] text-[#1A2434] max-md:text-center">Community Members</p>
             </div>
             <div className="counter flex flex-col items-center justify-center  max-md:mt-[1rem]">
                 <h1 className="text-[64px] text-black font-bold">
                     <CountUp start={0} end={5} delay={1} />
                     <span className="text-[#f5ba20]">+</span>
                 </h1>
-                <p className="text-[20px] text-[#1A2434]">Class Subjects</p>
+                <p className="text-[20px] text-[#1A2434] max-md:text-center">Class Subjects</p>
             </div>
             <div className="counter flex flex-col items-center justify-center  max-md:mt-[1rem]">
                 <h1 className="text-[64px] text-black font-bold">
                     <CountUp start={0} end={98} delay={1}/>
                     <span className="text-[#f5ba20]">%</span>
                 </h1>
-                <p className="text-[20px] text-[#1A2434]">Student Satisfaction</p>
+                <p className="text-[20px] text-[#1A2434] max-md:text-center">Student Satisfaction</p>
             </div>
         </div>
     );

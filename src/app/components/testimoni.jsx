@@ -3,6 +3,7 @@ import Image from "next/image"
 import Sarah from '../../assets/Testimonial/sarah.png'
 import Andini from '../../assets/Testimonial/Andini.png'
 import Rizky from '../../assets/Testimonial/rizky.png'
+import Student from '../../assets/unknow.png'
 import { FaStar } from "react-icons/fa";
 import AOS from 'aos'
 import "aos/dist/aos.css"
@@ -18,21 +19,21 @@ const testimoni = () => {
     }, []);
     const testimonials = [
         {
-            img: Sarah,
+            img: Student,
             name: "Sarah",
             title: "Information System Student",
             rate: "4.9",
             comment: "Cyber ​​House has changed my view on cyber security. The material is very clear, and the instructors are always ready to help. After this bootcamp, I feel more confident in my abilities."
         },
         {
-            img: Rizky,
+            img: Student,
             name: "Rizky",
             title: "Junior Penetration Tester",
             rate: "4.8",
             comment: "Cyber ​​House Bootcamp provides a strong foundation for a career in cybersecurity with well-structured programs and applicable knowledge. Highly recommended."
         },
         {
-            img: Andini,
+            img: Student,
             name: "Andini",
             title: "Fresh Graduate of Informatics",
             rate: "5.0",
